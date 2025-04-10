@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="popup.js"></script>
+    <title>Job Tracker</title>
+    <style>
+        /* Add your custom CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>Job Tracker</h1>
+    <form id="jobForm">
+        <label for="job">Job Title:</label>
+        <input type="text" id="job" name="job" required><br>
+
+        <label for="company">Company:</label>
+        <input type="text" id="company" name="company" required><br>
+
+        <label for="date">Date:</label>
+        <input type="text" id="date" name="date" value="" required><br>
+
+        <script>
+            // Autofill the date input with the current date
+            document.getElementById("date").value = new Date().toISOString().split("T")[0];
+        </script>
+
+        <label for="link">Link:</label>
+        <input type="text" id="link" name="link" required><br>
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required><br>
+
+        <!-- Add more input fields for other job details -->
+
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
